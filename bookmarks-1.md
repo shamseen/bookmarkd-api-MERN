@@ -12,7 +12,6 @@ Your goal for this week's homework is to build a bookmark app that lets users ad
 - JavaScript
 - Node / Express
 - Mongo / Mongoose
-- React
 
 ---
 
