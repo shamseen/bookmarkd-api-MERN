@@ -1,9 +1,22 @@
 // Require modules
 require('dotenv').config() // inject .env into process.env
 const express = require('express'); // http server
+const mongoose = require('mongoose'); // talks to mongo db
 
-// Create the Express app
+// App variables
 const app = express();
+const port = 8000;
+
+// Connect to database
+mongoose.connect(process.env.MONGO_URI, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+})
+// confirm connection
+mongoose.connection.once('connected', () => console.log('Connected to mongoDB'));
+
 
 // Routes
 app.get('/', (req, res) => {
@@ -11,8 +24,6 @@ app.get('/', (req, res) => {
 })
 
 // Tell the app to listen on port 8000
-const port = 8000;
-
 app.listen(port, () => {
-    console.log('app is running on port: ' + port);
+    console.log('API server is running on port:' + port);
 });
