@@ -5,4 +5,6 @@ const bookmarkSchema = new Schema({
     url: { type: String, required: true, unique: false }
 })
 
+// NOTE: mongoose/mongo adds _id & _v
+
 module.exports = model('Bookmark', bookmarkSchema);
