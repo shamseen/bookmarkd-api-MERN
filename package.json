@@ -1,4 +1,7 @@
 {
+  "name": "bookmarkd-api-mern",
+  "version": "0.1.0",
+  "description": "first shot at MERN",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -8,5 +11,10 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
+  },
+  "author": "shamseen",
+  "license": "MIT",
+  "engines": {
+    "node": "14.x"
   }
 }
